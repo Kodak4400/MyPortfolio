@@ -1,0 +1,23 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+#snowfStyle {
+    width: 100%;
+    height: 100%;
+}
+
+@media print, screen and (max-width: 684px) {
+    body {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        margin:0; 
+        position: relative;
+    }
+    #snowfStyle {
+        width: 100%;
+        height: 100%;
+    }
+}
