@@ -11,7 +11,7 @@
       <p class="my-title-dev-skills">Development Skills</p>
       <apexchart type=bar height=250px width=95% :options="frontChartOptions" :series="series" />
       <div class="my-dev-skills-details">
-        ※Cloud(AWS): EC2, S3, IAM, VPC, Lambda, CloudFront, Route53, DynamoDB, Cognito
+        ※Cloud(AWS): 主にServerless分野（EC2, S3, IAM, VPC, Lambda, CloudFront, Route53, DynamoDB, Cognitoなど）
       </div>
     </div>
   </div>
@@ -41,7 +41,7 @@ export default {
           title: {
             text: '自己評価'
           },
-          categories: ['JavaScript', 'FrontFW[Vue.js, Nuxt.js]', 'CSS', 'Python', 'PHP', 'Cloud(AWS)', 'CMS(WordPress)']
+          categories: ['JavaScript', 'FrontFW(Vue, Nuxt)', 'CSS', 'Python', 'PHP', 'Cloud(AWS)', 'CMS(WordPress)']
         }
       }
     }

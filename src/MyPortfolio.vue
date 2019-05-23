@@ -22,20 +22,24 @@
 </template>
 
 <script>
-import jsonFile from '../static/portfolio_data.json'
+import axios from 'axios'
 
 export default {
   data () {
     return {
+      'info': '0',
       styleObject: {
         'background-color': 'black'
       }
     }
   },
   created: function () {
-    if (jsonFile.info === '1') {
-      this.styleObject['background-color'] = 'white'
-    }
+    axios.get('http://kodak.portfolio.info.s3-website-ap-northeast-1.amazonaws.com')
+      .then(res => {
+        if (res.data.info === '1') {
+          this.styleObject['background-color'] = 'white'
+        }
+      })
   }
 }
 </script>

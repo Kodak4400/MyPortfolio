@@ -12,7 +12,7 @@ import Snowf from 'vue-snowf'
 
 import VueApexCharts from 'vue-apexcharts'
 
-import jsonFile from '../static/portfolio_data.json'
+import axios from 'axios'
 import '@/styles/main.css'
 
 Vue.use(BootstrapVue)
@@ -23,13 +23,6 @@ Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#myportfolio',
-  router,
-  components: { MyPortfolio },
-  template: '<MyPortfolio/>'
-})
-
-new Vue({
   el: '#snowf',
   data: {
     'info': '0'
@@ -38,7 +31,10 @@ new Vue({
     Snowf
   },
   created: function () {
-    this.info = jsonFile.info
+    axios.get('http://kodak.portfolio.info.s3-website-ap-northeast-1.amazonaws.com')
+      .then(res => {
+        this.info = res.data.info
+      })
   },
   template:
     `<div id="snowfStyle" >
@@ -67,4 +63,11 @@ new Vue({
       color="#FF99CC"
       style="position:fixed; top:0; left:0; margin:0; width:100%; height:100%;" />
     </div>`
+})
+
+new Vue({
+  el: '#myportfolio',
+  router,
+  components: { MyPortfolio },
+  template: '<MyPortfolio/>'
 })
