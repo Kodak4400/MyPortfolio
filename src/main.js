@@ -31,7 +31,7 @@ new Vue({
     Snowf
   },
   created: function () {
-    axios.get('http://kodak.portfolio.info.s3-website-ap-northeast-1.amazonaws.com')
+    axios.get('https://www.tama-kodak.com/multi-origin-behavior/portfolio_data.json')
       .then(res => {
         this.info = res.data.info
       })

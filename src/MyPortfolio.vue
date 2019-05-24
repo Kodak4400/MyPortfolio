@@ -34,8 +34,9 @@ export default {
     }
   },
   created: function () {
-    axios.get('http://kodak.portfolio.info.s3-website-ap-northeast-1.amazonaws.com')
+    axios.get('https://www.tama-kodak.com/multi-origin-behavior/portfolio_data.json')
       .then(res => {
+        console.log(res.data)
         if (res.data.info === '1') {
           this.styleObject['background-color'] = 'white'
         }
