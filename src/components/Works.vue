@@ -22,7 +22,7 @@ export default {
         'title': 'MyPortfolio',
         'screen': 'MyPortfolio.png',
         'message': 'このPortfolioサイトのこと。AWSとVue.jsを使ってサーバーレスなサイトになっています。時間帯によってサイトの雰囲気が変わる工夫も？ 詳細はブログを参照ください。',
-        'bloglink': 'https://kodak.hatenablog.com/entry/2018/04/08/111954'
+        'bloglink': 'https://kodak.hatenablog.com/entry/2019/05/26/001806'
       }
     }
   },
